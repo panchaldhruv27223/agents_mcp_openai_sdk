@@ -1,0 +1,14 @@
+[project]
+name = "multi-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastmcp>=2.14.1",
+    "mcp[cli]>=1.25.0",
+    "openai>=2.14.0",
+    "openai-agents>=0.6.4",
+    "pydantic>=2.12.5",
+    "pydentic>=0.0.1.dev3",
+]
