@@ -146,9 +146,7 @@ import sys
 import asyncio
 from openai import AsyncOpenAI
 
-
 load_dotenv()
-
 
 ollama_client = AsyncOpenAI(
     base_url = "http://localhost:11434/v1",
@@ -157,7 +155,6 @@ ollama_client = AsyncOpenAI(
 
 
 async def main():
-    
     agent = Agent(
         name = "Assistant",
         instructions = "You are a helpful assistant that answer question clearly and concisely.",
@@ -165,7 +162,6 @@ async def main():
             openai_client = ollama_client,
             model = "ministral-3:3b"
         )
-
     )
 
     result = await Runner.run(
@@ -177,7 +173,6 @@ async def main():
     )    
 
     print(result.final_output)
-
 
 if __name__ == "__main__":
     asyncio.run(main())
